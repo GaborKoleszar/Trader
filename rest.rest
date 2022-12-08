@@ -6,4 +6,14 @@ content-type: application/json
     "lastName":"Koleszar",
     "email":"kgabi92@gmail.com",
     "password":"Test"
+};
+
+###
+
+POST http://localhost:3001/auth/login
+content-type: application/json
+
+{
+    "email":"kgabi92@gmail.com",
+    "password":"Test"
 }

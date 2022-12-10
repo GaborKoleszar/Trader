@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "target": "ES2018",
         "baseUrl": "src"
     },
     "include": ["src"]

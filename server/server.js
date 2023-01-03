@@ -8,6 +8,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
+import dashboardRoutes from "./routes/dashboard.js";
 import expressEjsLayouts from "express-ejs-layouts";
 
 /* CONFIGURATIONS */
@@ -35,10 +36,8 @@ app.use(expressEjsLayouts);
 app.use(express.static("public"));
 
 /* EXPRESS ROUTES */
+app.use("/", dashboardRoutes);
 app.use("/auth", authRoutes);
-app.get("/", (req, res) => {
-    res.redirect("auth/login");
-});
 
 /* MONGOOSE SETUP */
 mongoose.set("strictQuery", false);
